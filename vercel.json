@@ -6,6 +6,10 @@
     {
       "source": "/xrpec",
       "destination": "/index.html"
+    },
+    {
+      "source": "/consulta",
+      "destination": "/index.html"
     }
   ],
   "headers": [

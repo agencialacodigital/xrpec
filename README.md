@@ -13,14 +13,13 @@ A pessoa digita o e-mail da compra e é levada direto ao checkout certo da Lastl
 - O script de captura e o Meta Pixel (`974617600838066`, evento `PageView`) estão em `index.html`. Se trocar de script/pixel, é lá.
 - Como esses scripts precisam rodar, o `vercel.json` libera `'unsafe-inline'` em `script-src` e os domínios `connect.facebook.net`, `www.facebook.com` e `omnpvrixdqtsdzmlrclj.supabase.co`. Se adicionar outra ferramenta (TikTok, GA…), inclua o domínio dela na CSP.
 
-## Página de vendas (/xrpec)
+## Página de vendas (/)
 
-Fica em `seusite.com/xrpec`. A consulta de oferta continua na raiz (`/`).
+Fica na raiz do domínio (`/`), com `/xrpec` como atalho. A consulta rápida só por e-mail passou para `/consulta`.
 
 - A copy está em `src/content/copy.md`, exatamente como foi enviada. Para ajustar um texto, edite só esse arquivo: a página lê dele.
 - Os botões abrem um pop-up com nome e e-mail e usam a mesma consulta de antes (`/api/lookup`): xR Pec e compradores da Black 2025 veem 50%, aluno geral e público geral veem o preço de cada um, e a pessoa é levada ao checkout certo. O preço só aparece depois da consulta.
 - As fotos ficam em `src/assets/xr/` (já otimizadas). O logo do xR Pec é desenhado em código (`XrLogo` em `src/sales/ui.tsx`).
-- Para a vendas ser a página principal do domínio, troque a regra em `src/main.tsx` (`isSales`) e o `rewrites` do `vercel.json`.
 - O Pixel dispara o evento `Lead` quando a consulta é concluída.
 
 ## Regras
